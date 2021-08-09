@@ -18,6 +18,12 @@
         .formulario{
             margin-left: 5px;
         }
+        .color-rojo{
+            color: red;
+        }
+        .color-verde{
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -70,7 +76,7 @@
             </div>
             <div>
                 {% for salida in request.session.salida %}
-                <p>{{salida.text}}</p>
+                <p class="color-{{salida.color}}"> {{salida.text}} {{salida.date}}</p>
                 {% endfor %}
             </div>
         </div>
